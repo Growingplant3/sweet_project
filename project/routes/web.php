@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\TopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('web/common/top');
+Route::controller(TopController::class)->group(function () {
+    Route::get('/', 'default')->name('default');
+    Route::get('work', 'work')->name('work');
 });
 
 Route::get('/dashboard', function () {
