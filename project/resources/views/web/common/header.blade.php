@@ -1,5 +1,3 @@
-@include("web.common.nav")
-
 <!-- Masthead-->
 <header class="masthead">
 	<div class="container position-relative">
