@@ -2,7 +2,7 @@
 @include("web.common.nav")
 @include("web.common.header")
 
-@include("web.common.top.section1")
+{{ link_to(route("upload_image.create"), '画像アップロード') }}
 @include("web.common.top.section2")
 @include("web.common.top.section3")
 @include("web.common.top.section4")
