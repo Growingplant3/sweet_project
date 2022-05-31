@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\TopController;
+use App\Http\Controllers\Web\UploadImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ Route::controller(TopController::class)->group(function () {
     Route::get('/', 'default')->name('default');
     Route::get('work', 'work')->name('work');
 });
+
+Route::resource('upload_image', UploadImageController::class, ['only' => ['show', 'create', 'store']]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
