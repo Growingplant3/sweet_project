@@ -9,6 +9,6 @@ class UploadImage extends Model
 {
     use HasFactory;
 
-    protected $table = "upload_image";
-    protected $filable = ["file_name", "file_path"];
+    protected $table = "upload_images";
+    protected $fillable = ["file_name", "file_path"];
 }
